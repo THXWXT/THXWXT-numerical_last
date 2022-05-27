@@ -13,7 +13,11 @@ const Secant = () => {
   const xrInputRef = useRef();
 
   const sendRequest = async () => {
-    const response = await fetch("http://localhost:5000/api/get-bisection");
+    const response = await fetch("http://localhost:5000/api/get-bisection", {
+      headers: {
+          authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvZ29AaG90bWFpbC5jb20iLCJwYXNzd29yZCI6IjEyMzEyMyIsImlhdCI6MTY1MzY1MDc5MywiZXhwIjoxNjg1MTg2NzkzfQ.5tw9Z_D0XooZox5p2-IW0tMO1RZzyDumvVJl3lv2I0Y`,
+      },
+  });
     const responseData = await response.json();
     setIsLoaded(responseData);
   };
