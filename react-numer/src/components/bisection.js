@@ -32,7 +32,7 @@ const Bisection = () => {
   };
   return (
     <div className="h1pj">
-      <h1>คำนวณ_Bisection</h1>
+      <h1>คำนวณ_Bisectionn</h1>
       <div className="inputarea">
         <form onSubmit={saveItem}>
           <div>
